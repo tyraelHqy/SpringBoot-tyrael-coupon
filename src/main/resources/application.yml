@@ -1,0 +1,16 @@
+spring:
+#  profiles:
+#    active: dev
+  application:
+    name: tyrael-coupon
+
+server:
+  servlet:
+    context-path: /imooc
+  port: 8000
+
+
+imooc:
+  springboot:
+    version: 2.1,2.1.4
+    name: coupon
