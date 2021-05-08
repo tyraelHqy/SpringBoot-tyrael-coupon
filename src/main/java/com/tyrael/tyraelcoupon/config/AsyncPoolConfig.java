@@ -40,7 +40,7 @@ public class AsyncPoolConfig implements AsyncConfigurer {
         executor.setWaitForTasksToCompleteOnShutdown(true);
 
         // 默认的等待时长,设置为0意味着不等待
-        executor.setAwaitTerminationSeconds(0);
+        executor.setAwaitTerminationSeconds(60);
 
         // 拒绝策略
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
