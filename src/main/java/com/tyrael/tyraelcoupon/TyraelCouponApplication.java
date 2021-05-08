@@ -5,9 +5,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+/**
+ * @EnableScheduling 允许当前的应用开启定时任务
+ * @EnableAsync 开启异步支持
+ */
+
 @EnableScheduling
+@EnableAsync
 @SpringBootApplication
 public class TyraelCouponApplication {
 
