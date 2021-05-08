@@ -15,35 +15,36 @@ import java.time.format.DateTimeFormatter;
 public class BootSchedule {
     private final DateTimeFormatter fmt = DateTimeFormatter.ofPattern("HH:mm:ss");
 
-    /**
-     * 上一次开始执行时间点之后3000毫秒再执行
-     */
-    @Scheduled(fixedRate = 3000)
-    public void schedule01(){
-        log.info("schedule01 -> {}", LocalDateTime.now().format(fmt));
-    }
+//    /**
+//     * 上一次开始执行时间点之后3000毫秒再执行
+//     */
+//    @Scheduled(fixedRate = 3000)
+//    public void schedule01(){
+//        log.info("schedule01 -> {}", LocalDateTime.now().format(fmt));
+//    }
+//
+//    /**
+//     * 上一次执行完毕时间点之后3000毫秒再执行
+//     */
+//    @Scheduled(fixedDelay = 3000)
+//    public void schedule02(){
+//        log.info("schedule02 -> {}", LocalDateTime.now().format(fmt));
+//    }
+//
+//    /**
+//     * 第一次延迟2s之后执行，之后按照fixRate每3000ms执行一次
+//     */
+//    @Scheduled(initialDelay = 2000,fixedRate = 3000)
+//    public void schedule03(){
+//        log.info("schedule03 -> {}", LocalDateTime.now().format(fmt));
+//    }
+//
+//    /**
+//     * 表达式，每3s执行一次
+//     */
+//    @Scheduled(cron = "*/3 * * * * ?")
+//    public void schedule04(){
+//        log.info("schedule04 -> {}", LocalDateTime.now().format(fmt));
+//    }
 
-    /**
-     * 上一次执行完毕时间点之后3000毫秒再执行
-     */
-    @Scheduled(fixedDelay = 3000)
-    public void schedule02(){
-        log.info("schedule02 -> {}", LocalDateTime.now().format(fmt));
-    }
-
-    /**
-     * 第一次延迟2s之后执行，之后按照fixRate每3000ms执行一次
-     */
-    @Scheduled(initialDelay = 2000,fixedRate = 3000)
-    public void schedule03(){
-        log.info("schedule03 -> {}", LocalDateTime.now().format(fmt));
-    }
-
-    /**
-     * 表达式，每3s执行一次
-     */
-    @Scheduled(cron = "*/3 * * * * ?")
-    public void schedule04(){
-        log.info("schedule04 -> {}", LocalDateTime.now().format(fmt));
-    }
 }
