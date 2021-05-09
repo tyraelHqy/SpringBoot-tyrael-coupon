@@ -14,3 +14,19 @@ imooc:
   springboot:
     version: 2.1,2.1.4
     name: coupon
+
+
+management:
+  endpoint:
+    auditevents:
+      enabled: true # 最特殊的监控端点，操作控制类
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 打开所有的监控点
+# /imooc/actuator
+info:
+  app:
+    name: Tyrael-coupon
+    groupID: com.tyrael
+    version: 0.0.1-SNAPSHOT
